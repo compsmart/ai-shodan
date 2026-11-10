@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetSearch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside id="nav">
+    <a class="brand" href="#/dashboard"><span class="logo">◎</span> NetSearch</a>
+    <nav>
+      <a href="#/dashboard" data-page="dashboard">Dashboard</a>
+      <a href="#/explore" data-page="explore">Explore</a>
+      <a href="#/scans" data-page="scans">Scans</a>
+      <a href="#/sources" data-page="sources">Sources</a>
+      <a href="#/insights" data-page="insights">Insights</a>
+      <a href="#/settings" data-page="settings">Settings</a>
+    </nav>
+    <form id="quick" data-submit="quick-search">
+      <input name="q" placeholder="Quick search…" autocomplete="off" aria-label="Quick search">
+    </form>
+  </aside>
+  <main id="view"></main>
+  <div id="overlay" data-action="close-drawer" hidden></div>
+  <aside id="drawer" hidden aria-label="Details">
+    <header><h2 id="drawer-title"></h2><button class="icon" data-action="close-drawer" aria-label="Close">✕</button></header>
+    <div id="drawer-body"></div>
+  </aside>
+  <div id="toasts" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
